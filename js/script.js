@@ -16,27 +16,45 @@ sendBtn.addEventListener("click", function(){
     let travelFinalCost = "";
     let discountAmount = "";
 
-    if (userAge >= 18 && userAge <= 65){
-        travelFinalCost = travelBaseCost;
-    } else if(userAge < 18){
-        travelFinalCost = travelBaseCost * 0.8;
-        discountAmount = travelBaseCost * 0.2;
-    } else{
-        travelFinalCost = travelBaseCost * 0.6;
-        discountAmount = travelBaseCost * 0.4;
-    }
+     if (userAge >= 18 && userAge <= 65){
+         travelFinalCost = travelBaseCost;
+     } else if(userAge < 18){
+         travelFinalCost = travelBaseCost * 0.8;
+         discountAmount = travelBaseCost * 0.2;
+     } else{
+         travelFinalCost = travelBaseCost * 0.6;
+         discountAmount = travelBaseCost * 0.4;
+     }
+
+    // if (userAge === "18 - 65"){
+    //     travelFinalCost = travelBaseCost;
+    // } else if (userAge === "Under 18"){
+    //     travelFinalCost = travelBaseCost * 0.8;
+    //     discountAmount = travelBaseCost * 0.2;
+    // } else if (userAge === "Over 65"){
+    //     travelFinalCost = travelBaseCost * 0.6;
+    //     discountAmount = travelBaseCost * 0.4;
+    // }
 
     console.log(travelFinalCost.toFixed(2));
 
     let costReturn = "";
 
-    if (userAge >= 18 && userAge <= 65){
-        costReturn = `The cost of your travel is ${travelFinalCost.toFixed(2)}€`;
-    } else if(userAge < 18){
-        costReturn = `Minors get a ${discountAmount.toFixed(2)}€ discount. The cost of your travel is ${travelFinalCost.toFixed(2)}€`;
-    } else{
-        costReturn = `Old people get a ${discountAmount.toFixed(2)}€ discount. The cost of your travel is ${travelFinalCost.toFixed(2)}€`;
-    }
+     if (userAge >= 18 && userAge <= 65){
+         costReturn = `The cost of your travel is ${travelFinalCost.toFixed(2)}€`;
+     } else if(userAge < 18){
+         costReturn = `Minors get a ${discountAmount.toFixed(2)}€ discount. The cost of your travel is ${travelFinalCost.toFixed(2)}€`;
+     } else{
+         costReturn = `Old people get a ${discountAmount.toFixed(2)}€ discount. The cost of your travel is ${travelFinalCost.toFixed(2)}€`;
+     }
+
+    // if (userAge === "18 - 65"){
+    //     costReturn = `The cost of your travel is ${travelFinalCost.toFixed(2)}€`;
+    // } else if (userAge === "Under 18"){
+    //     costReturn = `Minors get a ${discountAmount.toFixed(2)}€ discount. The cost of your travel is ${travelFinalCost.toFixed(2)}€`;
+    // } else if (userAge === "Over 65"){
+    //     costReturn = `Old people get a ${discountAmount.toFixed(2)}€ discount. The cost of your travel is ${travelFinalCost.toFixed(2)}€`;
+    // }
 
     document.getElementById("result").innerHTML = costReturn;
 });
