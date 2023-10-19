@@ -1,7 +1,6 @@
 /*Custom properties*/
 :root{
-    --bg-color: white;
-    --primary-color: brown;
+    --main-color: #b91450;
 }
 
 /*Reset*/
@@ -9,4 +8,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: var(--main-color);
+}
+
+body{
+    background-color: var(--main-color);
+}
+
+h2{
+    color: white;
+}
+
+section{
+    background-color: white;
 }

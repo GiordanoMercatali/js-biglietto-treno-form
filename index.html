@@ -5,20 +5,29 @@
 	<head>
 		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- BOOTSTRAP STYLESHEET -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>        <!-- CUSTOM STYLESHEET -->
+
+        <!-- STYLE -->
         <link rel="stylesheet" href="css/style.css">
 		<title> Train Ticket </title>
 	</head>
 
     <body>
-        <section class="module">
-            <div class="input-item">
-                <label for="distance">How many Kilometers do you want to travel?</label>
-                <input type="number" id="distance">
-            </div>
-
-            <div class="input-item">
-                <label for="age">How old are you?</label>
-                <input type="number" id="age">
+        <h2 class="text-center">Calculate Ticket Price</h2>
+        <section class="module border rounded m-3 p-3">
+            <div class="d-flex row mb-3">
+                <div class="input-item col-6 d-flex flex-column align-items-center">
+                    <label for="distance">How many Kilometers do you want to travel?</label>
+                    <input type="number" id="distance">
+                </div>
+    
+                <div class="input-item col-6 d-flex flex-column align-items-center">
+                    <label for="age">How old are you?</label>
+                    <input type="number" id="age">
+                </div>
             </div>
 
             <!-- <div class="input-item">
@@ -30,14 +39,17 @@
                 </select>
             </div> -->
 
-            <div class="buttons">
-                <button id="send">Send</button>
-                <button id="clear">Clear</button>
+            <div class="buttons d-flex justify-content-center gap-2">
+                <button class="p-1 rounded" id="send">Send</button>
+                <button class="p-1 rounded" id="clear">Clear</button>
             </div>
 
         </section>
 
-        <h2 id="result">  </h2>
+        <h2 class="text-center">Your Ticket</h2>
+        <section class="result-section m-3 text-center border d-none">
+            <h3 id="result">  </h3>
+        </section>
         <script src="js/script.js"></script>
     </body>
 </html>
