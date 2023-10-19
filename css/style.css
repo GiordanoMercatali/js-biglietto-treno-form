@@ -1,0 +1,12 @@
+/*Custom properties*/
+:root{
+    --bg-color: white;
+    --primary-color: brown;
+}
+
+/*Reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
