@@ -41,3 +41,10 @@ sendBtn.addEventListener("click", function(){
     document.getElementById("result").innerHTML = costReturn;
 });
 
+const clearBtn = document.getElementById("clear");
+clearBtn.addEventListener("click", function(){
+    travelDistanceElem.value = "";
+    userAgeElem.value = "";
+
+    document.getElementById("result").innerHTML = "";
+});
