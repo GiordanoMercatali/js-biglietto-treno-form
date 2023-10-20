@@ -44,11 +44,11 @@ sendBtn.addEventListener("click", function(){
 
     // console.log(travelFinalCost.toFixed(2));
 
-    function getRandomNumber(max) {
-        return Math.floor(Math.random() * max);
+    function getRandomNumber(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
       }
     
-    let ticketCode = getRandomNumber(99999);
+    let ticketCode = getRandomNumber(10001, 99999);
 
     let costReturn = "";
 
