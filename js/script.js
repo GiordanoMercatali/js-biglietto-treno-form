@@ -1,3 +1,6 @@
+const userNameElem = document.getElementById("name");
+console.log(userNameElem);
+
 const travelDistanceElem = document.getElementById("distance");
 console.log(travelDistanceElem);
 
@@ -8,9 +11,10 @@ const resultSection = document.querySelector(".result-section");
 
 const sendBtn = document.getElementById("send");
 sendBtn.addEventListener("click", function(){
+    const userName = userNameElem.value;
     const travelDistance = travelDistanceElem.value;
     const userAge = userAgeElem.value;
-    console.log(travelDistance, userAge);
+    console.log(userName, travelDistance, userAge);
 
     const travelBaseCost = travelDistance * 0.21.toFixed(2);
     console.log(travelBaseCost, typeof travelBaseCost);
@@ -49,13 +53,16 @@ sendBtn.addEventListener("click", function(){
     let costReturn = "";
 
      if (userAge >= 18 && userAge <= 65){
-         costReturn = `The cost of your travel is ${travelFinalCost.toFixed(2)}€
+         costReturn = `Hi ${userName}!
+         <br>The cost of your travel is ${travelFinalCost.toFixed(2)}€
          <br>The code of your ticket is ${ticketCode}`;
         } else if(userAge < 18){
-         costReturn = `Minors get a ${discountAmount.toFixed(2)}€ discount. The cost of your travel is ${travelFinalCost.toFixed(2)}€
+         costReturn = `Hi ${userName}!
+         <br>Minors get a ${discountAmount.toFixed(2)}€ discount. The cost of your travel is ${travelFinalCost.toFixed(2)}€
          <br>The code of your ticket is ${ticketCode}`;
         } else{
-         costReturn = `Elders get a ${discountAmount.toFixed(2)}€ discount. The cost of your travel is ${travelFinalCost.toFixed(2)}€
+         costReturn = `Hi ${userName}!
+         <br>Elders get a ${discountAmount.toFixed(2)}€ discount. The cost of your travel is ${travelFinalCost.toFixed(2)}€
          <br>The code of your ticket is ${ticketCode}`;
      }
 
@@ -74,6 +81,7 @@ sendBtn.addEventListener("click", function(){
 
 const clearBtn = document.getElementById("clear");
 clearBtn.addEventListener("click", function(){
+    userNameElem.value = "";
     travelDistanceElem.value = "";
     userAgeElem.value = "";
 
